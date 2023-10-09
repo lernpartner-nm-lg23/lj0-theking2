@@ -1,0 +1,34 @@
+body {
+    background-color: darkslategray;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+.insel-text {
+    padding: 1px;
+    background-color: white;
+    color: darkslategray;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+.insel-text:first-child {
+    margin-top: 0;
+}
+.insel-text:hover {
+    box-shadow: 0 0 20px rgb(0, 255, 149);
+}
+
+nav ul {
+    list-style: none;
+    padding
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: yellow;
+    color: darkslategray;
+}
