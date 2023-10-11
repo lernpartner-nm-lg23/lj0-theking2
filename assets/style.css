@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+@font-face {
+    font-family: 'Asap';
+    font-weight: 400;
+    font-style: normal;
+    src: url(./fonts/Asap/Asap-Regular-webfont.ttf);
+}
+
+@font-face {
+    font-family: 'Asap';
+    font-weight: 800;
+    font-style: normal;
+    src: url(./fonts/Asap/Asap-Bold-webfont.ttf);
+}
+
+@font-face {
+    font-family: 'Asap';
+    font-weight: 400;
+    font-style: italic;
+    src: url(./fonts/Asap/Asap-Italic-webfont.ttf);
+}
+
+@font-face {
+    font-family: 'Asap';
+    font-weight: 800;
+    font-style: italic;
+    src: url(./fonts/Asap/Asap-BoldItalic-webfont.ttf);
+}
+
+@media (min-width: 48em) {
+    :root {
+        font-size: calc(1rem + ((1vw - 0.48em) * 0.6944));
+        min-height: 0vw;
+    }
+}
+
+@media (min-width: 120em) {
+    :root {
+        font-size: 1.5em;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    background-color: darkslategray;
+    color: white;
+    font-family: Asap;
+    line-height: 1.5em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.insel-text {
+    width: 33.3%;
+
+    background-color: white;
+    color: darkslategray;
+    border-radius: 1em;
+
+    transition: 0.75s box-shadow, 400ms transform;
+}
+
+.insel-text p {
+    padding: 1em;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.insel-text:hover {
+    box-shadow: 0 0 20px rgb(0, 255, 149);
+    transform: scale(1.05);
+}
+
+.insel-bild {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.insel-text p a {
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    background-color: yellow;
+    color: darkslategray;
+}
+
+#test {
+    background-color: olive;
+    width: 300px;
+    height: 200px;
+    border-color: black;
+    border-style: solid;
+    border-width: 10px 20px;
+    padding: 55px;
+}
+
+/* hamburger */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+    -webkit-backdrop-filter: blur();
+    backdrop-filter: invert(1);
+}
+
+#main-menu {
+    display: block;
+    height: 100px;
+    width: 100%;
+    background: white;
+    margin: 0px;
+    z-index: 9;
+}
+
+#main-menu ul {
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 9;
+}
+
+#main-menu li {
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+#main-menu a {
+    color: #B9FAF8;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#main-menu a:hover {
+    text-decoration: underline;
+}
+
+#hamburger-input {
+    display: none;
+}
+
+#hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 48%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(to bottom,
+            white, white 20%,
+            rgb(0 0 0 / 0) 20%, rgb(0 0 0 / 0) 40%,
+            white 40%, white 60%,
+            rgb(0 0 0 / 0) 60%, rgb(0 0 0 / 0) 80%,
+            white 80%, white 100%);
+}
+
+#hamburger-menu #sidebar-menu {
+    position: fixed;
+    top: -1000px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: darkslategray;
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+    color: #B9FAF8;
+    font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+    padding-left: 0px;
+}
+
+#hamburger-menu li {
+    list-style-type: none;
+    line-height: 3rem;
+}
+
+#hamburger-menu a {
+    color: #B9FAF8;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+    text-decoration: underline;
+}
+
+#hamburger-input:checked+#hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+    top: 0;
+}
+
+#hamburger-input:checked~.overlay {
+    visibility: visible;
+    opacity: 0.4;
+}
+
+header {
+    margin-top: calc(50px + 20px);
+
+}
+
+/* hamburger end */
+@media screen and (width < 800px) {
+    #container {
+        display: block;
+    }
+
+    .insel-text {
+        width: fit-content;
+        border-radius: 0;
+        margin-top: 1em;
+    }
+
+    .insel-text:first-child {
+        margin-top: 0;
+    }
+
+    .insel-text:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+
+}
