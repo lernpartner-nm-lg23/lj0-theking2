@@ -71,6 +71,7 @@ body {
 .insel-text  p {
     padding: 1em;
     text-align: justify;
+    hyphens: auto;
 }
 
 .insel-text:hover {
