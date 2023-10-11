@@ -65,13 +65,22 @@ body {
     background-color: white;
     color: darkslategray;
     border-radius: 1em;
-    padding: 1em;
+
     transition: 0.75s box-shadow, 400ms transform;
+}
+.insel-text  p {
+    padding: 1em;
+    text-align: justify;
 }
 
 .insel-text:hover {
     box-shadow: 0 0 20px rgb(0, 255, 149);
     transform: scale(1.05);
+}
+
+.insel-bild {
+    width: 100%;
+    height: auto;
 }
 
 nav ul {
@@ -83,7 +92,10 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
+.insel-text p a {
+    display: block;
+    text-align: center;
+}
 a:hover {
     background-color: yellow;
     color: darkslategray;
